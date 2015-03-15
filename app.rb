@@ -26,3 +26,8 @@ get "/dog/:id" do
     @dog = Dog.find(params[:id])
     json @dog
 end
+
+get "/dog/:id/track" do
+    @dog = Dog.find(params[:id])
+    json @dog.tracks
+end
